@@ -1,6 +1,6 @@
-# Socket.io Chat Application
+# Socket.io 
 
-This project is a simple real-time chat application that I developed as part of my learning journey with **Socket.io**. The primary goal of this project was to understand how **Socket.io** works, how real-time communication is established between users, and how to handle messaging in chat rooms.
+This project is a simple(basiccccc) real-time chat application that I developed as part of my learning journey with **Socket.io**. The primary goal of this project was to understand how **Socket.io** works, how real-time communication is established between users, and how to handle messaging in chat rooms.
 
 ## Project Description
 
