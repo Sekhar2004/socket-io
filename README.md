@@ -19,3 +19,8 @@ This project is a simple(basiccccc) real-time chat application that I developed 
 - **Express.js**: Web framework for building RESTful APIs.
 - **MongoDB**: NoSQL database for message storage.
 - **JWT**: Handles user authentication securely.
+  
+<img width="386" alt="register" src="https://github.com/user-attachments/assets/cd0fcd66-d2ed-4665-87c6-faeb96bfb363">
+<img width="383" alt="login" src="https://github.com/user-attachments/assets/822a6768-53af-468f-b3f4-3069645d7c01">
+<img width="959" alt="room" src="https://github.com/user-attachments/assets/edd95796-ce16-4993-b2fc-f89a2800ff64">
+
