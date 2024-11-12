@@ -1,153 +1,163 @@
-* {
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: silver;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Center the whole page content */
+    align-items: center; /* Center vertically */
     height: 100vh;
 }
 
-.container {
+#authSection {
     display: flex;
-    background-color: #fff;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 800px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px;
-    height: 550px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.left-side {
-    width: 30%;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.right-side {
-    width: 70%;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-h1 {
-    text-align: center;
+#authTitle {
     font-size: 24px;
     margin-bottom: 20px;
     color: #333;
 }
 
-#roomUserCount {
-    font-size: 16px;
-    color: #555;
-    font-weight: bold;
-    margin-top: 10px;
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 8px;
-    display: inline-block;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#roomUserCount:hover {
-    background-color: #e0e0e0;
-    cursor: pointer;
-}
-
-.input-group {
-    margin-bottom: 15px;
-}
-
-input {
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+#authSection input {
+    margin: 10px 0;
+    padding: 12px;
     width: 100%;
+    max-width: 320px;
     border-radius: 5px;
-    border: 1px solid #ddd;
-    font-size: 14px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#authSection button {
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 320px;
+    margin-top: 10px;
+}
+
+#authSection button:hover {
+    background-color: #45a049;
+}
+
+#authSection p {
+    margin-top: 10px;
+    color: #333;
+}
+
+#authSection span {
+    color: #4CAF50;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#authSection span:hover {
+    text-decoration: underline;
+}
+
+#chatSection {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+#chatLayout {
+    width: 80%;
+    max-width: 800px; /* Set a max width for the chat layout */
+    display: flex;
+    height: 70%; /* Adjust height as needed */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#roomSection {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#roomSection input, #roomSection button {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#chatWindow {
+    flex: 2;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#chat {
+    height: calc(100vh - 120px);
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+}
+
+textarea {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 button {
-    padding: 10px;
-    width: 100%;
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    font-size: 16px;
+    padding: 10px 20px;
     border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
     cursor: pointer;
-    margin-bottom: 10px;
 }
 
 button:hover {
     background-color: #45a049;
 }
 
-button:active {
-    background-color: #388e3c;
-}
-
-/* Chat Messages */
-#chat {
-    flex-grow: 1;
-    overflow-y: auto;
+.message {
+    margin: 5px 0;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    margin-bottom: 15px;
-    max-height: 300px;
+    border-radius: 5px;
 }
 
-#chat .message {
-    margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 1.5;
-    display: flex;
-    align-items: center;
+.sender {
+    background-color: #0084ff;
+    text-align: right;
 }
 
-#chat .message .profile-name {
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-#chat .message .text {
-    background-color: #dfe6e9;
-    padding: 8px 12px;
-    border-radius: 10px;
-    max-width: 70%;
-}
-
-/* sender-right */
-
-#chat .message.sender {
-    justify-content: flex-end;
-}
-
-#chat .message.sender .text {
-    background-color: #74b9ff;
-    max-width: 60%;
-}
-/* reciever-left */
-
-
-#chat .message.receiver {
-    justify-content: flex-start;
-}
-
-#chat .message.receiver .text {
-    background-color: #55efc4;
-    max-width: 60%;
+.receiver {
+    background-color: #f1f1f1;
 }

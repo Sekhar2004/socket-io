@@ -3,43 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Socket.io</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+    <title>SOCKET</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Left Side for Details -->
-        <div class="left-side">
-            <h1>Socket.io</h1>
-            
-            <div id="roomUserCount">Online: 0</div>
-            
-            <div class="input-group">
-                <input type="text" id="roomInput" placeholder="Enter room ID" />
-            </div>
-            
-            <div class="input-group">
-                <input type="text" id="userNameInput" placeholder="Enter username" />
-            </div>
-            
-            <button id="joinRoomBtn">Join Room</button>
-            
-            <div class="input-group">
-                <input type="text" id="messageInput" placeholder="Enter your message" />
-            </div>
-            
-            <button id="sendMessageBtn">Send Message</button>
+    <div id="authSection">
+        <h2 id="authTitle">Login</h2>
+    
+        <div id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Username" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button id="loginBtn">Login</button>
+            <p>Don't have an account? <span id="registerLink">Register</span></p>
         </div>
-        
-        <!-- Right Side for Chat -->
-        <div class="right-side">
-            <div id="chat">
-                <!-- Messages will be dynamically added here by JavaScript -->
+    
+        <div id="registerForm" style="display: none;">
+            <input type="text" id="registerUsername" placeholder="Username" required>
+            <input type="password" id="registerPassword" placeholder="Password" required>
+            <button id="registerBtn">Register</button>
+            <p>Already have an account? <span id="loginLink">Login</span></p>
+        </div>
+    </div>
+    
+
+    <div id="chatSection" style="display: none;">
+        <div id="chatLayout">
+            <div id="roomSection">
+                <h3>Chat</h3>
+                <input type="text" id="roomInput" placeholder="Enter room ID">
+                <button id="joinRoomBtn">Join Room</button>
+                <p id="roomUserCount">Users in room: 0</p>
+            </div>
+
+            <div id="chatWindow">
+                <div id="chat"></div>
+                <textarea id="messageInput" placeholder="Type a message"></textarea>
+                <button id="sendMessageBtn">Send</button>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script> <!-- Socket.io CDN -->
-    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
