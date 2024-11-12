@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.io</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side for Details -->
+        <div class="left-side">
+            <h1>Socket.io</h1>
+            
+            <div id="roomUserCount">Online: 0</div>
+            
+            <div class="input-group">
+                <input type="text" id="roomInput" placeholder="Enter room ID" />
+            </div>
+            
+            <div class="input-group">
+                <input type="text" id="userNameInput" placeholder="Enter username" />
+            </div>
+            
+            <button id="joinRoomBtn">Join Room</button>
+            
+            <div class="input-group">
+                <input type="text" id="messageInput" placeholder="Enter your message" />
+            </div>
+            
+            <button id="sendMessageBtn">Send Message</button>
+        </div>
+        
+        <!-- Right Side for Chat -->
+        <div class="right-side">
+            <div id="chat">
+                <!-- Messages will be dynamically added here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script> <!-- Socket.io CDN -->
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
