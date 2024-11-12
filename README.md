@@ -2,22 +2,20 @@
 
 This project is a simple(basiccccc) real-time chat application that I developed as part of my learning journey with **Socket.io**. The primary goal of this project was to understand how **Socket.io** works, how real-time communication is established between users, and how to handle messaging in chat rooms.
 
+## Features
 
+- **User Authentication**: Secure login and registration using JWT-based authentication.
+- **Real-Time Messaging**: Instant message delivery within chat rooms.
+- **Room-Based Chat**: Join, create, or interact in multiple chat rooms.
+- **Message History**: Access previous messages when joining a room.
+- **User Presence**: Track the number of active users in each room.
+- **Message Styling**: Messages from the sender appear on the right, while the receiver’s messages appear on the left.
+- **Persistent Storage**: All chat messages are stored in MongoDB for later access.
 
-Features
+## Technologies
 
-User Authentication: Register and log in with JWT-based authentication.
-Real-Time Messaging: Send and receive messages instantly in chat rooms.
-Room-Based Chat: Join or create chat rooms and interact with others in real-time.
-Message History: View previous messages when you join a room.
-User Presence: See the number of users currently online in each room.
-Message Styling: Sender's messages appear on the right; receiver's on the left.
-Persistent Storage: All messages are stored in a MongoDB database.
-
-Technologies
-
-Socket.io: Real-time communication
-Node.js: Server-side JavaScript
-Express.js: Web framework
-MongoDB: Database for message storage
-JWT: User authentication
+- **Socket.io**: Enables real-time communication between clients and the server.
+- **Node.js**: JavaScript runtime for server-side development.
+- **Express.js**: Web framework for building RESTful APIs.
+- **MongoDB**: NoSQL database for message storage.
+- **JWT**: Handles user authentication securely.
